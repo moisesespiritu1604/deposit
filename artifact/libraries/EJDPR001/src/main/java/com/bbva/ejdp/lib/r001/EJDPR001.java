@@ -15,6 +15,6 @@ public interface EJDPR001 {
 	/**
 	 * The execute method...
 	 */
-	DepositResponseDTO executeRegisterDeposit(CustomerDTO customerDTO, DepositRequestDTO depositRequestDTO, DepositResponseDTO depositResponseDTO);
+	DepositResponseDTO executeRegisterDeposit(DepositRequestDTO depositRequestDTO);
 	List<CustomerDepositDTO> executeGetAllCustomerDeposits();
 }

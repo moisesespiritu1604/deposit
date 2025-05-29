@@ -17,6 +17,9 @@ public class CustomerDTO implements Serializable  {
 	private String accountNumber;
 	private String customerName;
 
+
+
+
 	public Long getId() {
 		return id;
 	}

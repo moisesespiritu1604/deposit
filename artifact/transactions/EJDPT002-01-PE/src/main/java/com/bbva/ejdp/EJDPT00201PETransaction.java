@@ -1,8 +1,10 @@
 package com.bbva.ejdp;
 
+import com.bbva.apx.exception.business.BusinessException;
 import com.bbva.ejdp.dto.deposit.CustomerDepositDTO;
 import com.bbva.ejdp.lib.r001.EJDPR001;
 import com.bbva.elara.domain.transaction.Severity;
+import com.bbva.elara.domain.transaction.response.HttpResponseCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,12 +27,17 @@ public class EJDPT00201PETransaction extends AbstractEJDPT00201PETransaction {
 		EJDPR001 ejdpR001 = this.getServiceLibrary(EJDPR001.class);
 		// TODO - Implementation of business logic
 
-		List<CustomerDepositDTO> customerDepositList = ejdpR001.executeGetAllCustomerDeposits();
-
-		this.setCustomerlist(customerDepositList);
-		this.setSeverity(Severity.OK);
-
-		LOGGER.info("[EJDPT00102PETransaction] - Fin de ejecución");
+		try {
+			List<CustomerDepositDTO> customerDepositList = ejdpR001.executeGetAllCustomerDeposits();
+			this.setCustomerlist(customerDepositList);
+			this.setHttpResponseCode(HttpResponseCode.HTTP_CODE_200);
+			this.setSeverity(Severity.OK);
+		} catch (BusinessException ex) {
+			LOGGER.info("Error técnico al listar depósitos: {}", ex.getMessage());
+			this.addAdvice(ex.getAdviceCode());
+			this.setHttpResponseCode(HttpResponseCode.HTTP_CODE_400);
+			this.setSeverity(Severity.EWR);
+		}
 	}
 
 }
