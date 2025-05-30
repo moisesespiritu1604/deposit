@@ -26,5 +26,5 @@
 			<parameter order="8" name="status" mandatory="1" type="String" size="20"/>
 		</dto>
 	</paramsOut>
-	<description>Expone el servicio para registrar solicitudes de depósitos a plazo</description>
+	<description>Registro de clientes y depositos a plazo</description>
 </transaction>

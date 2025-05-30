@@ -11,7 +11,7 @@ public enum BusinessExceptionEJDP {
 
     // Técnicos (en librería)
     DUPLICATE_ACCOUNT_NUMBER("EJDP00000003", true, "El número de cuenta ya existe"),
-    ERROR_CREATING_CUSTOMER("EJDP00000004", true, "Error al crear el cliente"),
+   // ERROR_CREATING_CUSTOMER("EJDP00000004", true, "Error al crear el cliente"),
     ERROR_CREATING_DEPOSIT("EJDP00000005", true, "Error al registrar el depósito"),
     ERROR_FETCHING_DEPOSITS("EJDP00000006", false, "Error al consultar los depósitos");
 

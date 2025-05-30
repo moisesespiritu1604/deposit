@@ -43,16 +43,6 @@ public class EJDPR001Impl extends EJDPR001Abstract {
 						BusinessExceptionEJDP.DUPLICATE_ACCOUNT_NUMBER.getMessage());
 			}
 
-			// Validación valores negativos o fuera de rango (más detalle)
-			if (depositRequestDTO.getAmount() <= 0
-					|| depositRequestDTO.getInterestRate() < 0 || depositRequestDTO.getInterestRate() > 100
-					|| depositRequestDTO.getTermDays() <= 0) {
-				throw new BusinessException(
-						BusinessExceptionEJDP.MANDATORY_FIELD_MISSING.getCode(),
-						false,
-						"Valores inválidos para amount, interestRate o termDays");
-			}
-
 			// Obtener IDs
 			Long customerId = ((Number) jdbcUtils.queryForMap(QUERY_NEXT_CUSTOMER_ID).get("NEXT_ID")).longValue();
 			Long depositId = ((Number) jdbcUtils.queryForMap(QUERY_NEXT_DEPOSIT_ID).get("NEXT_ID")).longValue();

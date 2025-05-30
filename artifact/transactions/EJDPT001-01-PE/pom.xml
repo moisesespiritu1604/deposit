@@ -10,7 +10,7 @@
 	<artifactId>EJDPT001-01-PE</artifactId>
 	<version>0.0.0</version>
 	<packaging>bundle</packaging>
-	<description>Expone el servicio para registrar solicitudes de depósitos a plazo</description>
+	<description>Registro de clientes y depositos a plazo</description>
 	<properties>
 		<arc.osgi.version>0.0</arc.osgi.version>
 	</properties>
@@ -24,8 +24,10 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
+			<version>5.12.0</version>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>com.bbva.ejdp.dto.deposit</groupId>
 			<artifactId>EJDPC001</artifactId>

@@ -12,8 +12,6 @@ public abstract class AbstractEJDPT00101PETransaction extends AbstractTransactio
 
 	protected AbstractEJDPT00101PETransaction(){
 	}
-
-
 	/**
 	 * Return value for input parameter DepositRequest
 	 */

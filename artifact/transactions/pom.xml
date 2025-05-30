@@ -13,7 +13,7 @@
 	<packaging>pom</packaging>
 	<name>TRANSACTIONS-training-13052025</name>
 	<modules>
-		<module>EJDPT001-01-PE</module>
 		<module>EJDPT002-01-PE</module>
+		<module>EJDPT001-01-PE</module>
 	</modules>
 </project>
