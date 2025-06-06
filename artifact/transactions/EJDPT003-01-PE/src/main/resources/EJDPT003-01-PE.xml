@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="EJDPT003" application="EJDP" version="01" country="PE" language="ES">
+	<paramsIn/>
+	<paramsOut/>
+	<description>Prueba</description>
+</transaction>

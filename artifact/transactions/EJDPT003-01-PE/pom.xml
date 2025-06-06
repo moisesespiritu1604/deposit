@@ -7,10 +7,10 @@
 		<version>0.0.0</version>
 	</parent>
 	<groupId>com.bbva.ejdp</groupId>
-	<artifactId>EJDPT002-01-PE</artifactId>
+	<artifactId>EJDPT003-01-PE</artifactId>
 	<version>0.0.0</version>
 	<packaging>bundle</packaging>
-	<description>Mostrar lista de usuarios y los depositos</description>
+	<description>Prueba</description>
 	<properties>
 		<arc.osgi.version>0.0</arc.osgi.version>
 	</properties>
@@ -24,18 +24,7 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>5.12.0</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.bbva.ejdp</groupId>
-			<artifactId>EJDPR001</artifactId>
-			<version>0.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.bbva.ejdp.dto.deposit</groupId>
-			<artifactId>EJDPC001</artifactId>
-			<version>0.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -48,7 +37,7 @@
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-						<Bundle-Activator>com.bbva.ejdp.EJDPT00201PETransaction</Bundle-Activator>
+						<Bundle-Activator>com.bbva.ejdp.EJDPT00301PETransaction</Bundle-Activator>
 						<Bundle-Category>transaction</Bundle-Category>
 						<Export-Package>
 							!*;version="${arc.osgi.version}"
@@ -69,7 +58,7 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}"/>
+								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}" />
 							</tasks>
 						</configuration>
 					</execution>
@@ -91,7 +80,6 @@
 							<goal>prepare-agent-integration</goal>
 						</goals>
 					</execution>
-
 					<execution>
 						<id>default-report</id>
 						<goals>

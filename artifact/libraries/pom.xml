@@ -15,5 +15,7 @@
 	<modules>
 		<module>EJDPR001</module>
 		<module>EJDPR001IMPL</module>
+		<module>EJDPR002</module>
+		<module>EJDPR002IMPL</module>
 	</modules>
 </project>

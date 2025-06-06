@@ -15,5 +15,7 @@
 	<modules>
 		<module>EJDPT002-01-PE</module>
 		<module>EJDPT001-01-PE</module>
+		<module>EJDPT003-01-PE</module>
+		<module>EJDPT004-01-PE</module>
 	</modules>
 </project>
