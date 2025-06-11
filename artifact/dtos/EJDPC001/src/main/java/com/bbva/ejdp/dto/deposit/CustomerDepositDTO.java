@@ -1,8 +1,9 @@
 package com.bbva.ejdp.dto.deposit;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class CustomerDepositDTO {
+public class CustomerDepositDTO implements Serializable {
     private CustomerDTO customer;
     private DepositResponseDTO deposit;
 

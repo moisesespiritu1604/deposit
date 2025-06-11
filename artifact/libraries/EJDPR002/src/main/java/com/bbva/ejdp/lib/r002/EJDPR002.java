@@ -1,6 +1,8 @@
 package com.bbva.ejdp.lib.r002;
 
+import com.bbva.ejdp.dto.deposit.DepositRequestDTO;
 import com.bbva.ejdp.dto.deposit.aso.TimeDepositDTO;
+import com.bbva.ejdp.dto.deposit.mock.CustomerDepositMock;
 
 import java.util.List;
 
@@ -14,4 +16,5 @@ public interface EJDPR002 {
 	 */
 	void execute();
 	List<TimeDepositDTO> executeGetAllTimeDeposits();
+	CustomerDepositMock executeRegisterTimeDeposit(DepositRequestDTO requestDTO);
 }

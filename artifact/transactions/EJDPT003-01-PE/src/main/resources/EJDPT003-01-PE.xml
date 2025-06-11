@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <transaction xmlns="http://www.w3schools.com" transactionName="EJDPT003" application="EJDP" version="01" country="PE" language="ES">
-	<paramsIn/>
-	<paramsOut/>
-	<description>Prueba</description>
+	<paramsIn>
+		<parameter order="1" name="accountNumber" mandatory="1" type="String" size="8"/>
+		<parameter order="2" name="customerName" mandatory="1" type="String" size="20"/>
+		<parameter order="3" name="amount" mandatory="1" type="Double" size="8"/>
+		<parameter order="4" name="interestRate" mandatory="1" type="Double" size="2"/>
+		<parameter order="5" name="termDays" mandatory="1" type="Long" size="3"/>
+	</paramsIn>
+	<paramsOut>
+		<dto order="1" name="CustomerDepositMock" mandatory="1" package="com.bbva.ejdp.dto.deposit.CustomerDepositMock" artifactId="EJDPC001">
+			<dto order="1" name="customer" mandatory="1" package="com.bbva.ejdp.dto.deposit.CustomerDTO" artifactId="EJDPC001">
+				<parameter order="1" name="id" mandatory="1" type="Long" size="20"/>
+				<parameter order="2" name="accountNumber" mandatory="1" type="String" size="8"/>
+				<parameter order="3" name="customerName" mandatory="1" type="String" size="20"/>
+			</dto>
+			<list order="2" name="deposits" mandatory="1">
+				<dto order="1" name="deposit" mandatory="1" package="com.bbva.ejdp.dto.deposit.DepositResponseDTO" artifactId="EJDPC001">
+					<parameter order="1" name="id" mandatory="1" type="Long" size="20"/>
+					<parameter order="2" name="amount" mandatory="1" type="Double" size="8"/>
+					<parameter order="3" name="interestRate" mandatory="1" type="Double" size="2"/>
+					<parameter order="4" name="termDays" mandatory="1" type="Long" size="3"/>
+					<parameter order="5" name="applicationDate" mandatory="1" type="Date (YYYY-MM-DD)" size="0"/>
+					<parameter order="6" name="maturityDate" mandatory="1" type="Date (YYYY-MM-DD)" size="0"/>
+					<parameter order="7" name="interestEarned" mandatory="0" type="Double" size="20"/>
+					<parameter order="8" name="status" mandatory="1" type="String" size="20"/>
+				</dto>
+			</list>
+		</dto>
+	</paramsOut>
+	<description>Api conector POST</description>
 </transaction>

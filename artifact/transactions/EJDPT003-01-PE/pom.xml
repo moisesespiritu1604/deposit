@@ -26,6 +26,16 @@
 			<artifactId>mockito-core</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.bbva.ejdp</groupId>
+			<artifactId>EJDPR002</artifactId>
+			<version>0.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.bbva.ejdp.dto.deposit</groupId>
+			<artifactId>EJDPC001</artifactId>
+			<version>0.0.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -58,7 +68,7 @@
 						</goals>
 						<configuration>
 							<tasks>
-								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}" />
+								<copy file="./target/${project.artifactId}.jar" todir="${outputDirectoryTransactions}"/>
 							</tasks>
 						</configuration>
 					</execution>
